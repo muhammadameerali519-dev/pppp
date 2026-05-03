@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&family=Montserrat:wght@300;400;700&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  --font-display: "Montserrat", sans-serif;
+
+  --color-gold-50: #fdfaf0;
+  --color-gold-100: #f9f1d2;
+  --color-gold-200: #f1e0a2;
+  --color-gold-300: #e7ca69;
+  --color-gold-400: #d4af37;
+  --color-gold-500: #bd962b;
+  --color-gold-600: #9e7521;
+  --color-gold-700: #7e591d;
+  --color-gold-800: #684a1d;
+  --color-gold-900: #58401d;
+  
+  --color-luxury-black: #050505;
+  --color-luxury-cream: #f5f2ed;
+}
+
+@layer base {
+  body {
+    @apply bg-luxury-black text-luxury-cream selection:bg-gold-400 selection:text-luxury-black transition-colors duration-500;
+  }
+}
+
+.gold-glow {
+  text-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+.luxury-border {
+  @apply border border-white/10 backdrop-blur-md;
+}
+
+.glass-panel {
+  @apply bg-white/5 backdrop-blur-sm border border-white/10;
+}
+
+.atmosphere-top {
+  background: radial-gradient(circle at top right, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+}
+
+.atmosphere-bottom {
+  background: radial-gradient(circle at bottom left, rgba(142, 109, 45, 0.1) 0%, transparent 70%);
+}
